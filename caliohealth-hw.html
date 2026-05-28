@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CalioHealth — Find a licensed therapist who takes your insurance. Match by specialty, availability, and culture in 60 seconds." />
+  <title>CalioHealth | Find a Therapist Who Takes Your Insurance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Fraunces:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles-hw.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="CalioHealth home">
+        <span class="logo-mark">C</span>
+        <span class="logo-text">CalioHealth</span>
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+        <a href="#how-it-works">How it works</a>
+        <a href="#conditions">What we treat</a>
+        <a href="#insurance">Insurance</a>
+        <a href="#for-providers">For therapists</a>
+        <a href="#eap" class="nav-eap">EAP</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="#" class="btn-ghost">Log in</a>
+        <a href="#match" class="btn-primary">Find a therapist</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          200+ insurance plans accepted
+        </div>
+        <h1 class="hero-h1">
+          Find a therapist<br />
+          <em>who takes your insurance</em>
+        </h1>
+        <p class="hero-sub">
+          Match with a licensed therapist by specialty, availability, and cultural fit — and start healing in as little as 48 hours.
+        </p>
+
+        <!-- Match Widget -->
+        <div class="match-widget" id="match">
+          <div class="mw-row">
+            <div class="mw-field">
+              <label for="mw-concern">What brings you here?</label>
+              <select id="mw-concern">
+                <option value="">Select a concern...</option>
+                <option>Anxiety</option>
+                <option>Depression</option>
+                <option>Trauma &amp; PTSD</option>
+                <option>Relationship issues</option>
+                <option>Grief &amp; loss</option>
+                <option>Life transitions</option>
+                <option>Stress &amp; burnout</option>
+                <option>Self-esteem</option>
+                <option>LGBTQ+ support</option>
+                <option>Teen &amp; adolescent</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="mw-field">
+              <label for="mw-insurance">Your insurance</label>
+              <select id="mw-insurance">
+                <option value="">Select plan...</option>
+                <option>Aetna</option>
+                <option>Blue Cross Blue Shield</option>
+                <option>Cigna</option>
+                <option>Humana</option>
+                <option>United Healthcare</option>
+                <option>Oscar Health</option>
+                <option>Optum</option>
+                <option>I'll pay out of pocket</option>
+                <option>Not sure</option>
+              </select>
+            </div>
+          </div>
+          <button class="mw-submit" id="mw-btn">Find my therapist &rarr;</button>
+          <p class="mw-note">No account required &middot; HIPAA-secure &middot; Takes 60 seconds</p>
+        </div>
+
+        <div class="hero-trust">
+          <div class="ht-item">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#22C55E"/><path d="M4.5 8l2.5 2.5 4.5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Most plans: $0–$30 copay
+          </div>
+          <div class="ht-item">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#22C55E"/><path d="M4.5 8l2.5 2.5 4.5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            First session in 48 hours
+          </div>
+          <div class="ht-item">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#22C55E"/><path d="M4.5 8l2.5 2.5 4.5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Switch therapists anytime
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hv-card hv-main">
+          <div class="hv-avatar hv-a1"><span>SK</span></div>
+          <div class="hv-info">
+            <strong>Dr. Sofia Kim</strong>
+            <span>Anxiety &middot; Trauma &middot; CBT</span>
+            <div class="hv-ins">
+              <span class="ins-badge">Aetna</span>
+              <span class="ins-badge">BCBS</span>
+            </div>
+            <div class="hv-slots">
+              <span class="slot avail">Mon 2pm</span>
+              <span class="slot avail">Wed 4pm</span>
+              <span class="slot busy">Fri 10am</span>
+            </div>
+          </div>
+        </div>
+        <div class="hv-card hv-secondary">
+          <div class="hv-avatar hv-a2"><span>MR</span></div>
+          <div class="hv-info">
+            <strong>Marcus Reid, LCSW</strong>
+            <span>Depression &middot; Life transitions</span>
+            <div class="hv-ins">
+              <span class="ins-badge">Cigna</span>
+              <span class="ins-badge">UHC</span>
+            </div>
+          </div>
+        </div>
+        <div class="hv-card hv-third">
+          <div class="hv-avatar hv-a3"><span>AP</span></div>
+          <div class="hv-info">
+            <strong>Anika Patel, PhD</strong>
+            <span>Couples &middot; Grief &middot; DBT</span>
+            <div class="hv-ins">
+              <span class="ins-badge">Humana</span>
+            </div>
+          </div>
+        </div>
+        <div class="hv-stat">
+          <strong>4.9 &#9733;</strong>
+          <span>Avg. therapist rating</span>
+        </div>
+        <div class="hv-match-badge">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#7C6AF7"/><path d="M4 7l2 2 4-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Matched to your insurance
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INSURANCE MARQUEE ===== -->
+  <section id="insurance-strip">
+    <p class="ins-label">Accepted by 200+ insurance plans including</p>
+    <div class="marquee-wrap">
+      <div class="marquee-track" aria-hidden="true">
+        <span>Aetna</span><span>Blue Cross Blue Shield</span><span>Cigna</span>
+        <span>United Healthcare</span><span>Humana</span><span>Oscar Health</span>
+        <span>Optum</span><span>Magellan</span><span>Beacon Health</span>
+        <span>Tricare</span><span>Medicaid</span><span>Kaiser</span>
+        <span>Aetna</span><span>Blue Cross Blue Shield</span><span>Cigna</span>
+        <span>United Healthcare</span><span>Humana</span><span>Oscar Health</span>
+        <span>Optum</span><span>Magellan</span><span>Beacon Health</span>
+        <span>Tricare</span><span>Medicaid</span><span>Kaiser</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section id="how-it-works">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="eyebrow">Simple by design</p>
+        <h2>Therapy in 3 steps</h2>
+        <p class="section-sub">From first thought to first session — in 48 hours or less.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <div class="step-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="8" fill="#EDE9FF"/><path d="M7 14h4l3-6 3 10 3-8 2 4h3" stroke="#7C6AF7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Tell us what you need</h3>
+          <p>Answer a few quick questions — what you're going through, your insurance, your schedule. Zero judgment, total privacy.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <div class="step-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="8" fill="#EDE9FF"/><circle cx="14" cy="12" r="4" stroke="#7C6AF7" stroke-width="1.8"/><path d="M6 22c0-4 3.6-7 8-7s8 3 8 7" stroke="#7C6AF7" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Get matched instantly</h3>
+          <p>We match you with licensed therapists in your network — filtered by specialty, availability, language, and cultural background.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <div class="step-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="8" fill="#EDE9FF"/><rect x="7" y="8" width="14" height="13" rx="2" stroke="#7C6AF7" stroke-width="1.8"/><path d="M10 8V6M18 8V6M7 13h14" stroke="#7C6AF7" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Book and begin healing</h3>
+          <p>Pick a time that works for you. Meet virtually or in person. Most patients have their first session within 48 hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONDITIONS WE TREAT ===== -->
+  <section id="conditions">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="eyebrow">Comprehensive care</p>
+        <h2>Whatever you're going through,<br />we have a therapist for it</h2>
+      </div>
+      <div class="conditions-grid" id="conditions-grid">
+        <button class="cond-chip active" data-cond="anxiety">Anxiety</button>
+        <button class="cond-chip" data-cond="depression">Depression</button>
+        <button class="cond-chip" data-cond="trauma">Trauma &amp; PTSD</button>
+        <button class="cond-chip" data-cond="relationships">Relationship issues</button>
+        <button class="cond-chip" data-cond="grief">Grief &amp; loss</button>
+        <button class="cond-chip" data-cond="ocd">OCD</button>
+        <button class="cond-chip" data-cond="adhd">ADHD</button>
+        <button class="cond-chip" data-cond="bipolar">Bipolar disorder</button>
+        <button class="cond-chip" data-cond="eating">Eating disorders</button>
+        <button class="cond-chip" data-cond="addiction">Addiction &amp; recovery</button>
+        <button class="cond-chip" data-cond="life">Life transitions</button>
+        <button class="cond-chip" data-cond="stress">Stress &amp; burnout</button>
+        <button class="cond-chip" data-cond="self">Self-esteem</button>
+        <button class="cond-chip" data-cond="lgbtq">LGBTQ+ support</button>
+        <button class="cond-chip" data-cond="teen">Teen &amp; adolescent</button>
+        <button class="cond-chip" data-cond="couples">Couples therapy</button>
+        <button class="cond-chip" data-cond="family">Family therapy</button>
+        <button class="cond-chip" data-cond="sleep">Sleep &amp; insomnia</button>
+        <button class="cond-chip" data-cond="anger">Anger management</button>
+        <button class="cond-chip" data-cond="phobias">Phobias</button>
+      </div>
+      <div class="cond-detail" id="cond-detail">
+        <div class="cd-text">
+          <h3 id="cd-title">Anxiety</h3>
+          <p id="cd-body">Anxiety is one of the most common and most treatable mental health conditions. Our CBT and mindfulness-trained therapists help you understand your anxiety patterns, build coping tools, and reclaim your sense of control — without waiting months for an appointment.</p>
+        </div>
+        <a href="#match" class="btn-primary">Find an anxiety therapist &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THERAPIST CARDS ===== -->
+  <section id="therapists">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="eyebrow">Your care team</p>
+        <h2>Licensed therapists,<br />ready to see you this week</h2>
+        <p class="section-sub">Every CalioHealth therapist is fully credentialed, background-checked, and specialized in the areas they treat.</p>
+      </div>
+      <div class="therapist-filters">
+        <button class="tf-btn active" data-filter="all">All</button>
+        <button class="tf-btn" data-filter="anxiety">Anxiety</button>
+        <button class="tf-btn" data-filter="depression">Depression</button>
+        <button class="tf-btn" data-filter="trauma">Trauma</button>
+        <button class="tf-btn" data-filter="couples">Couples</button>
+        <button class="tf-btn" data-filter="teen">Teen &amp; Youth</button>
+      </div>
+      <div class="therapist-grid" id="therapist-grid">
+        <!-- Cards injected by JS -->
+      </div>
+      <div class="therapist-cta-row">
+        <p>Showing 6 of 5,000+ licensed therapists in our network</p>
+        <a href="#match" class="btn-primary">See all therapists &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INSURANCE COVERAGE ===== -->
+  <section id="insurance">
+    <div class="section-inner ins-section">
+      <div class="ins-left">
+        <p class="eyebrow">Zero financial barriers</p>
+        <h2>Most patients pay<br /><em>$0–$30 per session</em></h2>
+        <p class="ins-body">
+          CalioHealth verifies your benefits before your first appointment — so you know exactly what you'll pay, with no surprises. Most major insurance plans are accepted, and we handle all the billing.
+        </p>
+        <ul class="ins-checklist">
+          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#22C55E"/><path d="M5 9l3 3 5-5.5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> 200+ insurance plans accepted</li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#22C55E"/><path d="M5 9l3 3 5-5.5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> We verify your benefits automatically</li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#22C55E"/><path d="M5 9l3 3 5-5.5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Transparent cost shown before you book</li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#22C55E"/><path d="M5 9l3 3 5-5.5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> We handle all billing and claims</li>
+          <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="9" fill="#22C55E"/><path d="M5 9l3 3 5-5.5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Sliding scale available without insurance</li>
+        </ul>
+        <a href="#match" class="btn-primary">Check my insurance &rarr;</a>
+      </div>
+      <div class="ins-right">
+        <div class="ins-card">
+          <div class="ic-label">Your estimated cost</div>
+          <div class="ic-plan">
+            <div class="ic-ins-logo">BCBS</div>
+            <div>
+              <strong>Blue Cross Blue Shield PPO</strong>
+              <span>Mental health benefits verified &#10003;</span>
+            </div>
+          </div>
+          <div class="ic-breakdown">
+            <div class="ic-row">
+              <span>Session fee</span>
+              <span>$175</span>
+            </div>
+            <div class="ic-row">
+              <span>Insurance covers</span>
+              <span class="green">-$155</span>
+            </div>
+            <div class="ic-row total">
+              <span>Your copay</span>
+              <span>$20</span>
+            </div>
+          </div>
+          <div class="ic-note">&#128274; HIPAA-compliant &middot; No credit card required to check</div>
+        </div>
+        <div class="ins-plans-list">
+          <span>Aetna</span><span>BCBS</span><span>Cigna</span><span>UHC</span>
+          <span>Humana</span><span>Optum</span><span>Oscar</span><span>+193 more</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CALIOHEALTH ===== -->
+  <section id="why">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="eyebrow">Built different</p>
+        <h2>Why CalioHealth?</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-number">70%</div>
+          <h3>Meaningful improvement</h3>
+          <p>70% of CalioHealth patients report meaningful symptom improvement within 3 months, tracked by PHQ-9 and GAD-7 scores.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-number">48h</div>
+          <h3>First session in 48 hours</h3>
+          <p>From sign-up to first session in 48 hours or less. No referrals, no waitlists, no phone tag.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-number">5,000+</div>
+          <h3>Licensed therapists</h3>
+          <p>Fully credentialed therapists across every specialty — matched to you by need, availability, language, and cultural background.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-number">4.9&#9733;</div>
+          <h3>Exceptional care quality</h3>
+          <p>4.9 average patient satisfaction score. We measure and report outcomes so you always know your care is working.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="eyebrow">Patient stories</p>
+        <h2>Real people. Real change.</h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card featured">
+          <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testi-quote">"I had been avoiding therapy for two years because I didn't know what I'd pay or how long it would take to find someone. CalioHealth matched me with my therapist in literally 10 minutes. She took my Aetna plan and I had my first appointment two days later. I feel like a completely different person."</p>
+          <div class="testi-person">
+            <div class="tp-avatar" style="background:#EDE9FF;color:#7C6AF7">SM</div>
+            <div>
+              <strong>Sarah M.</strong>
+              <span>Anxiety &amp; depression, 6 months into treatment</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testi-quote">"Finding a Black therapist who specializes in trauma was impossible on my own. CalioHealth showed me options I never knew existed, confirmed my insurance in seconds, and I was booked the same week."</p>
+          <div class="testi-person">
+            <div class="tp-avatar" style="background:#FFF0EC;color:#FF7C5C">JW</div>
+            <div>
+              <strong>James W.</strong>
+              <span>Trauma &amp; PTSD, 4 months in</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testi-quote">"My son needed a therapist who understood teen anxiety and ADHD. The filter made it so easy — we found someone accepting new patients that same week. He's doing so much better."</p>
+          <div class="testi-person">
+            <div class="tp-avatar" style="background:#E8FBF4;color:#22C55E">RL</div>
+            <div>
+              <strong>Rebecca L.</strong>
+              <span>Parent, teen therapy, 3 months</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-stat-bar">
+        <div class="tsb-item">
+          <strong>87%</strong><span>retention rate through 12+ sessions</span>
+        </div>
+        <div class="tsb-div"></div>
+        <div class="tsb-item">
+          <strong>4.9</strong><span>avg. therapist satisfaction score</span>
+        </div>
+        <div class="tsb-div"></div>
+        <div class="tsb-item">
+          <strong>70%</strong><span>symptom improvement in 3 months</span>
+        </div>
+        <div class="tsb-div"></div>
+        <div class="tsb-item">
+          <strong>200+</strong><span>insurance plans accepted</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EAP ===== -->
+  <section id="eap">
+    <div class="section-inner eap-section">
+      <div class="eap-content">
+        <p class="eyebrow light">For employers</p>
+        <h2>Does your employer offer an EAP?</h2>
+        <p>Employee Assistance Programs cover 6–12 free therapy sessions per year. Enter your employer below to check your EAP benefits — it takes 10 seconds.</p>
+        <div class="eap-lookup">
+          <input type="text" id="eap-input" placeholder="Enter your employer or EAP code..." />
+          <button id="eap-btn" class="btn-primary">Check benefits</button>
+        </div>
+        <p class="eap-note">Don't know your EAP? We'll help you find it during sign-up.</p>
+      </div>
+      <div class="eap-visual">
+        <div class="eap-card">
+          <div class="eap-card-header">
+            <div class="eap-logo-circle">&#127970;</div>
+            <div>
+              <strong>Acme Corp EAP</strong>
+              <span>Benefits verified &#10003;</span>
+            </div>
+          </div>
+          <div class="eap-sessions">
+            <div class="eap-sess-label">Free sessions included</div>
+            <div class="eap-sess-dots">
+              <span class="dot active"></span><span class="dot active"></span>
+              <span class="dot active"></span><span class="dot active"></span>
+              <span class="dot active"></span><span class="dot active"></span>
+              <span class="dot"></span><span class="dot"></span>
+            </div>
+            <div class="eap-sess-count">6 of 8 sessions remaining</div>
+          </div>
+          <div class="eap-cost">
+            <span>Your cost per session</span>
+            <strong class="eap-free">$0</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOR PROVIDERS ===== -->
+  <section id="for-providers">
+    <div class="section-inner prov-section">
+      <div class="prov-left">
+        <p class="eyebrow">For therapists</p>
+        <h2>Focus on your patients.<br />We'll handle the rest.</h2>
+        <p>CalioHealth handles credentialing, billing, scheduling, and EHR documentation — so you can spend more time doing what matters: healing people.</p>
+        <ul class="prov-list">
+          <li>Full Revenue Cycle Management — 99% first-pass claim rate</li>
+          <li>Credentialing with 200+ payers handled for you</li>
+          <li>EHR integration and HIPAA-compliant documentation</li>
+          <li>We fill your caseload — no marketing required</li>
+          <li>Keep your clinical independence. Always.</li>
+        </ul>
+        <a href="#" class="btn-outline">Learn more for therapists &rarr;</a>
+      </div>
+      <div class="prov-right">
+        <div class="prov-stat-card">
+          <strong>$0</strong>
+          <span>Administrative cost to you</span>
+        </div>
+        <div class="prov-stat-card">
+          <strong>30%</strong>
+          <span>More time on patient care</span>
+        </div>
+        <div class="prov-stat-card">
+          <strong>99%</strong>
+          <span>First-pass claim rate</span>
+        </div>
+        <div class="prov-stat-card">
+          <strong>48h</strong>
+          <span>New patient in your calendar</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BANNER ===== -->
+  <section id="cta-banner">
+    <div class="cta-inner">
+      <h2>You don't have to figure it out alone.</h2>
+      <p>Start your search today. Most patients are matched and booked within 24 hours.</p>
+      <div class="cta-actions">
+        <a href="#match" class="btn-primary btn-large">Find my therapist</a>
+        <a href="#how-it-works" class="btn-ghost-light">See how it works</a>
+      </div>
+      <p class="cta-note">No account required &middot; Insurance verified automatically &middot; Free to search</p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo">
+          <span class="logo-mark">C</span>
+          <span class="logo-text">CalioHealth</span>
+        </a>
+        <p class="footer-tagline">Connecting Care. Empowering Healers. Proving Outcomes.</p>
+        <div class="footer-crisis">
+          <strong>Crisis support:</strong>
+          <a href="tel:988">988 Suicide &amp; Crisis Lifeline</a> &middot;
+          <a href="sms:741741">Text HOME to 741741</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="fl-col">
+          <strong>For Patients</strong>
+          <a href="#how-it-works">How it works</a>
+          <a href="#conditions">What we treat</a>
+          <a href="#insurance">Insurance</a>
+          <a href="#">Pricing</a>
+          <a href="#">FAQs</a>
+        </div>
+        <div class="fl-col">
+          <strong>Therapy types</strong>
+          <a href="#">Anxiety therapy</a>
+          <a href="#">Depression therapy</a>
+          <a href="#">Trauma therapy</a>
+          <a href="#">Couples therapy</a>
+          <a href="#">Teen therapy</a>
+        </div>
+        <div class="fl-col">
+          <strong>Company</strong>
+          <a href="#">About CalioHealth</a>
+          <a href="#">For therapists</a>
+          <a href="#">For employers (EAP)</a>
+          <a href="#">For payers</a>
+          <a href="#">Blog</a>
+        </div>
+        <div class="fl-col">
+          <strong>Legal</strong>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">HIPAA Notice</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 CalioHealth Inc. All rights reserved.</span>
+      <span>caliohealth.com &middot; hello@caliohealth.com</span>
+    </div>
+  </footer>
+
+  <script src="script-hw.js"></script>
+</body>
+</html>

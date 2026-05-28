@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CalioHealth — Find licensed therapists and behavioral health treatment near you. Search by condition, location, or insurance. Verified providers, real availability." />
+  <title>CalioHealth | Find Behavioral Health Care Near You</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles-rc.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="CalioHealth home">
+        <span class="logo-mark">C</span>
+        <span class="logo-text">CalioHealth</span>
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+        <div class="nav-item has-mega" id="nav-addiction">
+          <button class="nav-btn" aria-expanded="false">Conditions <svg width="12" height="7" viewBox="0 0 12 7" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="mega-menu">
+            <div class="mega-col">
+              <strong>By Condition</strong>
+              <a href="#">Anxiety</a>
+              <a href="#">Depression</a>
+              <a href="#">Trauma &amp; PTSD</a>
+              <a href="#">OCD</a>
+              <a href="#">Bipolar Disorder</a>
+              <a href="#">Eating Disorders</a>
+              <a href="#" class="mm-all">View all conditions →</a>
+            </div>
+            <div class="mega-col">
+              <strong>Addiction &amp; Recovery</strong>
+              <a href="#">Alcohol</a>
+              <a href="#">Opioids</a>
+              <a href="#">Benzodiazepines</a>
+              <a href="#">Dual Diagnosis</a>
+              <a href="#" class="mm-all">View all →</a>
+            </div>
+            <div class="mega-col">
+              <strong>Who We Serve</strong>
+              <a href="#">Adults</a>
+              <a href="#">Teens &amp; Youth</a>
+              <a href="#">Couples</a>
+              <a href="#">Veterans</a>
+              <a href="#">LGBTQ+</a>
+              <a href="#">Women</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item has-mega" id="nav-care">
+          <button class="nav-btn" aria-expanded="false">Care Types <svg width="12" height="7" viewBox="0 0 12 7" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="mega-menu">
+            <div class="mega-col">
+              <strong>Outpatient</strong>
+              <a href="#">Individual Therapy</a>
+              <a href="#">Couples Therapy</a>
+              <a href="#">Family Therapy</a>
+              <a href="#">Group Therapy</a>
+              <a href="#">Virtual / Telehealth</a>
+            </div>
+            <div class="mega-col">
+              <strong>Intensive Programs</strong>
+              <a href="#">Intensive Outpatient (IOP)</a>
+              <a href="#">Partial Hospitalization (PHP)</a>
+              <a href="#">Detox &amp; Residential</a>
+              <a href="#">Sober Living</a>
+            </div>
+          </div>
+        </div>
+        <a href="#insurance" class="nav-link">Insurance</a>
+        <a href="#resources" class="nav-link">Resources</a>
+        <a href="#providers" class="nav-link nav-prov">For Providers</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="#" class="btn-nav-ghost">Log in</a>
+        <a href="#search-hero" class="btn-nav-primary">Find care</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Trusted by 1 million+ people seeking care</p>
+      <h1>Find behavioral health care<br /><em>that works for you</em></h1>
+      <p class="hero-sub">Search 5,000+ licensed therapists and treatment centers by condition, location, or insurance — at no cost to you.</p>
+
+      <!-- Search Bar -->
+      <div class="search-bar-wrap" id="search-hero">
+        <div class="search-bar" id="search-bar">
+          <div class="sb-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="6" stroke="rgba(255,255,255,.5)" stroke-width="1.8"/><path d="M13.5 13.5L17 17" stroke="rgba(255,255,255,.5)" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <input type="text" id="search-input" placeholder="Search condition, therapist, or location..." autocomplete="off" aria-label="Search for care" />
+          <button class="sb-submit" id="sb-submit">Find Care</button>
+        </div>
+        <div class="search-suggestions" id="search-suggestions" aria-live="polite"></div>
+      </div>
+
+      <!-- Quick filters -->
+      <div class="hero-quick-links">
+        <span class="ql-label">Popular:</span>
+        <a href="#" class="ql-chip">Anxiety</a>
+        <a href="#" class="ql-chip">Depression</a>
+        <a href="#" class="ql-chip">Trauma &amp; PTSD</a>
+        <a href="#" class="ql-chip">Addiction</a>
+        <a href="#" class="ql-chip">Teen therapy</a>
+        <a href="#" class="ql-chip">Couples</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUST STATS STRIP ===== -->
+  <div id="stats-strip">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <strong>5,000+</strong>
+        <span>Licensed therapists &amp; treatment centers</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <strong>200+</strong>
+        <span>Insurance plans verified &amp; accepted</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <strong>10+ years</strong>
+        <span>Connecting people to care they can afford</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <strong>$0 fees</strong>
+        <span>Free to search — no referral required</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BROWSE BY CONDITION ===== -->
+  <section id="conditions">
+    <div class="section-inner">
+      <div class="sec-header">
+        <div>
+          <p class="eyebrow">Comprehensive care</p>
+          <h2>What brings you here today?</h2>
+        </div>
+        <a href="#" class="view-all-link">View all 20+ conditions →</a>
+      </div>
+      <div class="cond-grid">
+
+        <a href="#" class="cond-card" data-color="violet">
+          <div class="cc-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="1.8"/><path d="M10 14c0-2.2 1.8-4 4-4s4 1.8 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="14" cy="18" r="1.2" fill="currentColor"/></svg>
+          </div>
+          <div class="cc-text">
+            <h3>Anxiety</h3>
+            <p>Panic, worry, social anxiety, phobias</p>
+          </div>
+          <div class="cc-count">1,240+ therapists</div>
+        </a>
+
+        <a href="#" class="cond-card" data-color="teal">
+          <div class="cc-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 6v8m0 0l-4 4m4-4l4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="1.8"/></svg>
+          </div>
+          <div class="cc-text">
+            <h3>Depression</h3>
+            <p>Persistent sadness, loss of motivation</p>
+          </div>
+          <div class="cc-count">980+ therapists</div>
+        </a>
+
+        <a href="#" class="cond-card" data-color="amber">
+          <div class="cc-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M7 21l3.5-7 3.5 5 3-4 4 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="1.8"/></svg>
+          </div>
+          <div class="cc-text">
+            <h3>Trauma &amp; PTSD</h3>
+            <p>EMDR, CPT, somatic healing</p>
+          </div>
+          <div class="cc-count">760+ therapists</div>
+        </a>
+
+        <a href="#" class="cond-card" data-color="coral">
+          <div class="cc-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 8v4m0 4h.01M8 14a6 6 0 1112 0 6 6 0 01-12 0z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <div class="cc-text">
+            <h3>Addiction &amp; Recovery</h3>
+            <p>Alcohol, opioids, dual diagnosis</p>
+          </div>
+          <div class="cc-count">620+ centers</div>
+        </a>
+
+        <a href="#" class="cond-card" data-color="mint">
+          <div class="cc-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M9 14l4-4 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 7c0 2-3 4-3 7h6c0-3-3-5-3-7z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="cc-text">
+            <h3>Eating Disorders</h3>
+            <p>Anorexia, bulimia, binge eating</p>
+          </div>
+          <div class="cc-count">310+ specialists</div>
+        </a>
+
+        <a href="#" class="cond-card" data-color="navy">
+          <div class="cc-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="10" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/><circle cx="18" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/><path d="M7 21c0-3 1.3-5 3-5h8c1.7 0 3 2 3 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <div class="cc-text">
+            <h3>Couples Therapy</h3>
+            <p>Gottman, EFT, communication</p>
+          </div>
+          <div class="cc-count">850+ therapists</div>
+        </a>
+
+        <a href="#" class="cond-card" data-color="violet">
+          <div class="cc-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="6" y="10" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M10 10V8a4 4 0 018 0v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <div class="cc-text">
+            <h3>Teen &amp; Youth</h3>
+            <p>Ages 12–24 · ADHD, school stress</p>
+          </div>
+          <div class="cc-count">540+ specialists</div>
+        </a>
+
+        <a href="#" class="cond-card" data-color="teal">
+          <div class="cc-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 6a5 5 0 015 5c0 4-5 11-5 11S9 15 9 11a5 5 0 015-5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="14" cy="11" r="2" stroke="currentColor" stroke-width="1.6"/></svg>
+          </div>
+          <div class="cc-text">
+            <h3>OCD</h3>
+            <p>ERP-trained specialists, proven outcomes</p>
+          </div>
+          <div class="cc-count">290+ therapists</div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MATCHING QUIZ ===== -->
+  <section id="quiz">
+    <div class="section-inner">
+      <div class="quiz-card">
+        <div class="quiz-left">
+          <p class="eyebrow light">Smart matching</p>
+          <h2>Find the right care<br />in 60 seconds</h2>
+          <p class="quiz-intro">Answer three quick questions. We'll match you with licensed providers who are available, accept your insurance, and specialize in exactly what you need.</p>
+          <div class="quiz-trust">
+            <div class="qt-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#22C55E"/><path d="M4.5 8l2.5 2.5 4.5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> 100% confidential</div>
+            <div class="qt-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#22C55E"/><path d="M4.5 8l2.5 2.5 4.5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> No account required</div>
+            <div class="qt-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#22C55E"/><path d="M4.5 8l2.5 2.5 4.5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Free to use</div>
+          </div>
+        </div>
+        <div class="quiz-right">
+          <!-- Step indicators -->
+          <div class="quiz-steps" id="quiz-steps">
+            <div class="qs-item active" data-step="1"><span class="qs-num">1</span><span class="qs-label">What you need</span></div>
+            <div class="qs-line"></div>
+            <div class="qs-item" data-step="2"><span class="qs-num">2</span><span class="qs-label">Care format</span></div>
+            <div class="qs-line"></div>
+            <div class="qs-item" data-step="3"><span class="qs-num">3</span><span class="qs-label">Insurance</span></div>
+          </div>
+
+          <!-- Step 1 -->
+          <div class="quiz-step-content" id="quiz-step-1">
+            <h3>What are you going through?</h3>
+            <p class="qs-sub">Select all that apply</p>
+            <div class="quiz-chips" id="q1-chips">
+              <button class="qc-chip" data-val="anxiety">Anxiety</button>
+              <button class="qc-chip" data-val="depression">Depression</button>
+              <button class="qc-chip" data-val="trauma">Trauma / PTSD</button>
+              <button class="qc-chip" data-val="addiction">Addiction</button>
+              <button class="qc-chip" data-val="relationships">Relationships</button>
+              <button class="qc-chip" data-val="grief">Grief &amp; loss</button>
+              <button class="qc-chip" data-val="ocd">OCD</button>
+              <button class="qc-chip" data-val="adhd">ADHD</button>
+              <button class="qc-chip" data-val="eating">Eating disorder</button>
+              <button class="qc-chip" data-val="other">Not sure yet</button>
+            </div>
+            <button class="quiz-next" id="q1-next" disabled>Next: Care format →</button>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="quiz-step-content hidden" id="quiz-step-2">
+            <h3>How would you like to meet?</h3>
+            <p class="qs-sub">We'll show you matching options</p>
+            <div class="q2-options">
+              <label class="q2-opt" data-val="virtual">
+                <input type="radio" name="format" value="virtual" />
+                <div class="q2-card">
+                  <div class="q2-icon">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="7" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M20 11l4-2v10l-4-2V11z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                  </div>
+                  <strong>Virtual / Telehealth</strong>
+                  <span>Video sessions from home</span>
+                </div>
+              </label>
+              <label class="q2-opt" data-val="in-person">
+                <input type="radio" name="format" value="in-person" />
+                <div class="q2-card">
+                  <div class="q2-icon">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 6a5 5 0 015 5c0 4-5 10-5 10S9 15 9 11a5 5 0 015-5z" stroke="currentColor" stroke-width="1.8"/><circle cx="14" cy="11" r="2" stroke="currentColor" stroke-width="1.6"/></svg>
+                  </div>
+                  <strong>In-person</strong>
+                  <span>Meet at an office near you</span>
+                </div>
+              </label>
+              <label class="q2-opt" data-val="either">
+                <input type="radio" name="format" value="either" />
+                <div class="q2-card">
+                  <div class="q2-icon">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M8 14h12M14 8l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </div>
+                  <strong>Either works</strong>
+                  <span>Show me all options</span>
+                </div>
+              </label>
+            </div>
+            <div class="quiz-nav">
+              <button class="quiz-back" id="q2-back">← Back</button>
+              <button class="quiz-next" id="q2-next" disabled>Next: Insurance →</button>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="quiz-step-content hidden" id="quiz-step-3">
+            <h3>Do you have insurance?</h3>
+            <p class="qs-sub">We'll verify your benefits before you book</p>
+            <div class="q3-options">
+              <div class="q3-select-wrap" id="q3-yes-wrap">
+                <button class="q3-opt active" id="q3-yes">Yes, I have insurance</button>
+                <select id="q3-ins-select" class="q3-ins-select">
+                  <option value="">Select your plan...</option>
+                  <option>Aetna</option>
+                  <option>Blue Cross Blue Shield</option>
+                  <option>Cigna</option>
+                  <option>United Healthcare</option>
+                  <option>Humana</option>
+                  <option>Oscar Health</option>
+                  <option>Optum</option>
+                  <option>Medicaid</option>
+                  <option>Tricare</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <button class="q3-opt" id="q3-oop">No, I'll pay out of pocket</button>
+              <button class="q3-opt" id="q3-eap">My employer has an EAP</button>
+            </div>
+            <div class="quiz-nav">
+              <button class="quiz-back" id="q3-back">← Back</button>
+              <button class="quiz-submit" id="q3-submit">Show my matches →</button>
+            </div>
+          </div>
+
+          <!-- Result state -->
+          <div class="quiz-step-content hidden" id="quiz-result">
+            <div class="quiz-success">
+              <div class="qs-check">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#22C55E"/><path d="M9 16l5 5 9-9" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h3>Great news — matches found!</h3>
+              <p>We found licensed therapists matching your needs. Your first session could be as soon as <strong>tomorrow</strong>.</p>
+              <a href="#" class="btn-result">View my matches →</a>
+              <p class="result-note">Avg. copay for matched providers: <strong>$15–$30</strong></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INSURANCE ===== -->
+  <section id="insurance">
+    <div class="section-inner ins-inner">
+      <div class="ins-left">
+        <p class="eyebrow">Zero financial barriers</p>
+        <h2>We work with<br />your insurance</h2>
+        <p>CalioHealth verifies your benefits before your first appointment — so you know your exact copay before you book. No surprise bills, ever.</p>
+        <ul class="ins-checks">
+          <li>200+ insurance plans accepted nationwide</li>
+          <li>Benefits verified automatically before booking</li>
+          <li>Most patients pay $0–$30 per session</li>
+          <li>Sliding scale available without insurance</li>
+          <li>EAP benefits fully supported</li>
+        </ul>
+        <a href="#" class="btn-navy">Check your insurance →</a>
+      </div>
+      <div class="ins-right">
+        <div class="ins-grid">
+          <div class="ins-logo-card">
+            <div class="ilc-logo" style="background:#00A3E0;color:#fff">AE</div>
+            <span>Aetna</span>
+          </div>
+          <div class="ins-logo-card">
+            <div class="ilc-logo" style="background:#003087;color:#fff">BC</div>
+            <span>Blue Cross</span>
+          </div>
+          <div class="ins-logo-card">
+            <div class="ilc-logo" style="background:#006DB8;color:#fff">CI</div>
+            <span>Cigna</span>
+          </div>
+          <div class="ins-logo-card">
+            <div class="ilc-logo" style="background:#002677;color:#fff">UH</div>
+            <span>United</span>
+          </div>
+          <div class="ins-logo-card">
+            <div class="ilc-logo" style="background:#007F5F;color:#fff">HU</div>
+            <span>Humana</span>
+          </div>
+          <div class="ins-logo-card">
+            <div class="ilc-logo" style="background:#FF5A2C;color:#fff">OS</div>
+            <span>Oscar Health</span>
+          </div>
+          <div class="ins-logo-card">
+            <div class="ilc-logo" style="background:#4A154B;color:#fff">OP</div>
+            <span>Optum</span>
+          </div>
+          <div class="ins-logo-card featured">
+            <div class="ilc-logo" style="background:#1A2B4B;color:#fff">+193</div>
+            <span>More plans</span>
+          </div>
+        </div>
+        <div class="ins-badge-row">
+          <div class="ibr-badge"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#22C55E"/><path d="M4 7l2 2 4-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> HIPAA-compliant verification</div>
+          <div class="ibr-badge"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#22C55E"/><path d="M4 7l2 2 4-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> No credit card to check</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LOCATIONS ===== -->
+  <section id="locations">
+    <div class="section-inner">
+      <div class="sec-header">
+        <div>
+          <p class="eyebrow">Find care near you</p>
+          <h2>Browse therapists by state</h2>
+        </div>
+        <a href="#" class="view-all-link">Browse all states →</a>
+      </div>
+      <div class="locations-grid">
+        <a href="#" class="loc-card" data-state="CA">
+          <div class="lc-bg lc-ca"></div>
+          <div class="lc-content">
+            <h3>California</h3>
+            <span class="lc-count">1,200+ therapists</span>
+          </div>
+        </a>
+        <a href="#" class="loc-card" data-state="NY">
+          <div class="lc-bg lc-ny"></div>
+          <div class="lc-content">
+            <h3>New York</h3>
+            <span class="lc-count">980+ therapists</span>
+          </div>
+        </a>
+        <a href="#" class="loc-card" data-state="TX">
+          <div class="lc-bg lc-tx"></div>
+          <div class="lc-content">
+            <h3>Texas</h3>
+            <span class="lc-count">760+ therapists</span>
+          </div>
+        </a>
+        <a href="#" class="loc-card" data-state="FL">
+          <div class="lc-bg lc-fl"></div>
+          <div class="lc-content">
+            <h3>Florida</h3>
+            <span class="lc-count">680+ therapists</span>
+          </div>
+        </a>
+        <a href="#" class="loc-card" data-state="IL">
+          <div class="lc-bg lc-il"></div>
+          <div class="lc-content">
+            <h3>Illinois</h3>
+            <span class="lc-count">520+ therapists</span>
+          </div>
+        </a>
+        <a href="#" class="loc-card" data-state="GA">
+          <div class="lc-bg lc-ga"></div>
+          <div class="lc-content">
+            <h3>Georgia</h3>
+            <span class="lc-count">440+ therapists</span>
+          </div>
+        </a>
+        <a href="#" class="loc-card" data-state="CO">
+          <div class="lc-bg lc-co"></div>
+          <div class="lc-content">
+            <h3>Colorado</h3>
+            <span class="lc-count">390+ therapists</span>
+          </div>
+        </a>
+        <a href="#" class="loc-card" data-state="WA">
+          <div class="lc-bg lc-wa"></div>
+          <div class="lc-content">
+            <h3>Washington</h3>
+            <span class="lc-count">360+ therapists</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESOURCE HUB ===== -->
+  <section id="resources">
+    <div class="section-inner">
+      <div class="sec-header">
+        <div>
+          <p class="eyebrow">Education &amp; support</p>
+          <h2>Resources for every step</h2>
+        </div>
+      </div>
+      <div class="resources-grid">
+        <a href="#" class="res-card res-primary">
+          <div class="rc-icon" style="background:#EDE9FF">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 6v16M6 14h16" stroke="#7C6AF7" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Start Your Journey</h3>
+          <p>First-time therapy? We'll walk you through exactly what to expect, how to choose a therapist, and what your first session will look like.</p>
+          <span class="rc-link">Get started →</span>
+        </a>
+        <a href="#" class="res-card">
+          <div class="rc-icon" style="background:#FFF0EC">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="10" cy="11" r="4" stroke="#FF7C5C" stroke-width="1.8"/><path d="M4 22c0-3.3 2.7-6 6-6" stroke="#FF7C5C" stroke-width="1.8" stroke-linecap="round"/><circle cx="20" cy="11" r="3" stroke="#FF7C5C" stroke-width="1.6"/><path d="M20 17c2.2.3 4 2.1 4 5" stroke="#FF7C5C" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Help a Loved One</h3>
+          <p>Supporting someone who needs care? Learn how to have the conversation, what treatment looks like, and how to find help without overstepping.</p>
+          <span class="rc-link">Read the guide →</span>
+        </a>
+        <a href="#" class="res-card">
+          <div class="rc-icon" style="background:#E8FBF4">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="6" y="8" width="16" height="14" rx="2" stroke="#22C55E" stroke-width="1.8"/><path d="M10 8V6a4 4 0 018 0v2M14 14v3" stroke="#22C55E" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Paying for Care</h3>
+          <p>Understand your insurance benefits, EAP options, sliding scale fees, and financing — so cost never stands between you and care.</p>
+          <span class="rc-link">Explore options →</span>
+        </a>
+        <a href="#" class="res-card">
+          <div class="rc-icon" style="background:#FFF8E8">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M8 14h12M14 8l6 6-6 6" stroke="#FFB830" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Types of Therapy</h3>
+          <p>CBT, DBT, EMDR, ACT, ERP — understanding therapy modalities helps you find the approach that's proven to work for your condition.</p>
+          <span class="rc-link">Learn more →</span>
+        </a>
+        <a href="#" class="res-card">
+          <div class="rc-icon" style="background:#FFE8E8">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 8v6m0 4h.01" stroke="#EF4444" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="14" r="10" stroke="#EF4444" stroke-width="1.8"/></svg>
+          </div>
+          <h3>Crisis Support</h3>
+          <p>If you or someone you know is in crisis, you are not alone. Immediate, free, confidential support is available 24 hours a day.</p>
+          <span class="rc-link rc-crisis">Get help now →</span>
+        </a>
+        <a href="#" class="res-card">
+          <div class="rc-icon" style="background:#F4F1FF">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="5" y="7" width="18" height="16" rx="2" stroke="#7C6AF7" stroke-width="1.8"/><path d="M9 7V5a5 5 0 0110 0v2M9 14h10M9 18h6" stroke="#7C6AF7" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>For Employers</h3>
+          <p>EAP benefits, mental health stipends, and workforce wellness programs — designed for HR teams who want to actually move the needle.</p>
+          <span class="rc-link">Learn more →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOR PROVIDERS ===== -->
+  <section id="providers">
+    <div class="section-inner prov-inner">
+      <div class="prov-content">
+        <p class="eyebrow light">For therapists &amp; treatment centers</p>
+        <h2>Grow your practice.<br />We handle the rest.</h2>
+        <p>Join the CalioHealth network. We handle credentialing, billing, scheduling, and patient matching — so you can spend your time doing what matters: healing people.</p>
+        <div class="prov-stats">
+          <div class="ps-item">
+            <strong>30%</strong><span>more time on patient care</span>
+          </div>
+          <div class="ps-item">
+            <strong>99%</strong><span>first-pass claim rate</span>
+          </div>
+          <div class="ps-item">
+            <strong>$0</strong><span>admin cost to you</span>
+          </div>
+        </div>
+        <div class="prov-actions">
+          <a href="#" class="btn-white">Claim your profile →</a>
+          <a href="#" class="btn-ghost-light">Learn more for therapists</a>
+        </div>
+      </div>
+      <div class="prov-visual">
+        <div class="pv-card">
+          <div class="pvc-header">
+            <div class="pvc-avatar">SK</div>
+            <div>
+              <strong>Dr. Sofia Kim, PhD</strong>
+              <span>Verified CalioHealth Provider</span>
+            </div>
+            <div class="pvc-badge">Active</div>
+          </div>
+          <div class="pvc-stats">
+            <div class="pvcs-item">
+              <strong>48</strong><span>Patients this month</span>
+            </div>
+            <div class="pvcs-item">
+              <strong>4.9★</strong><span>Avg. rating</span>
+            </div>
+            <div class="pvcs-item">
+              <strong>100%</strong><span>Claims paid</span>
+            </div>
+          </div>
+          <div class="pvc-row">
+            <span class="pvc-label">Next available</span>
+            <span class="pvc-val green">Tomorrow, 2pm</span>
+          </div>
+          <div class="pvc-row">
+            <span class="pvc-label">Insurance accepted</span>
+            <span class="pvc-val">Aetna, BCBS, Cigna +8</span>
+          </div>
+          <div class="pvc-cta">Your profile is live and receiving matches</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section id="cta">
+    <div class="cta-inner">
+      <div class="cta-content">
+        <h2>Ready to take the first step?</h2>
+        <p>Search our network of 5,000+ licensed therapists and treatment centers. Free, confidential, and matched to your insurance.</p>
+        <div class="cta-actions">
+          <a href="#search-hero" class="btn-cta-primary">Find care now</a>
+          <a href="#quiz" class="btn-cta-secondary">Take the matching quiz</a>
+        </div>
+        <p class="cta-crisis">In crisis? Call or text <a href="tel:988"><strong>988</strong></a> · Text HOME to <a href="sms:741741"><strong>741741</strong></a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo footer-logo">
+            <span class="logo-mark">C</span>
+            <span class="logo-text">CalioHealth</span>
+          </a>
+          <p class="footer-tagline">Connecting Care. Empowering Healers.<br />Proving Outcomes.</p>
+          <div class="footer-crisis-box">
+            <strong>&#9888; Crisis Resources</strong>
+            <a href="tel:988">988 Suicide &amp; Crisis Lifeline</a>
+            <a href="sms:741741">Crisis Text Line: Text HOME to 741741</a>
+            <a href="tel:911">Emergency: 911</a>
+          </div>
+        </div>
+        <div class="footer-links-grid">
+          <div class="fl-col">
+            <strong>Mental Health</strong>
+            <a href="#">Anxiety Treatment</a>
+            <a href="#">Depression Therapy</a>
+            <a href="#">Trauma &amp; PTSD</a>
+            <a href="#">OCD Treatment</a>
+            <a href="#">Bipolar Disorder</a>
+            <a href="#">Eating Disorders</a>
+            <a href="#">Self-Esteem</a>
+          </div>
+          <div class="fl-col">
+            <strong>Addiction</strong>
+            <a href="#">Alcohol Rehab</a>
+            <a href="#">Drug Rehab</a>
+            <a href="#">Opioid Treatment</a>
+            <a href="#">Dual Diagnosis</a>
+            <a href="#">Detox Centers</a>
+            <a href="#">Sober Living</a>
+          </div>
+          <div class="fl-col">
+            <strong>By Audience</strong>
+            <a href="#">Teen &amp; Youth</a>
+            <a href="#">Couples Therapy</a>
+            <a href="#">Family Therapy</a>
+            <a href="#">LGBTQ+ Affirming</a>
+            <a href="#">Veterans &amp; Military</a>
+            <a href="#">Women's Mental Health</a>
+          </div>
+          <div class="fl-col">
+            <strong>Insurance &amp; Cost</strong>
+            <a href="#">Check My Insurance</a>
+            <a href="#">EAP Benefits</a>
+            <a href="#">Sliding Scale</a>
+            <a href="#">Medicaid / Medicare</a>
+            <a href="#">Paying for Care</a>
+          </div>
+          <div class="fl-col">
+            <strong>Company</strong>
+            <a href="#">About CalioHealth</a>
+            <a href="#">For Therapists</a>
+            <a href="#">For Employers</a>
+            <a href="#">For Payers</a>
+            <a href="#">Blog &amp; Resources</a>
+            <a href="#">Careers</a>
+          </div>
+          <div class="fl-col">
+            <strong>Legal</strong>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">HIPAA Notice</a>
+            <a href="#">Accessibility</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <span>&copy; 2025 CalioHealth Inc. All rights reserved.</span>
+        <span>caliohealth.com &middot; hello@caliohealth.com</span>
+        <span>Not a crisis service. If in emergency, call 911.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script-rc.js"></script>
+</body>
+</html>
